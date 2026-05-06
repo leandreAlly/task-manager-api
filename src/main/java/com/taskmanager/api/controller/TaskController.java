@@ -1,8 +1,13 @@
 package com.taskmanager.api.controller;
 
+import com.taskmanager.api.dto.CreateTaskRequest;
+import com.taskmanager.api.model.Task;
 import com.taskmanager.api.service.TaskService;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/tasks")
@@ -14,13 +19,24 @@ public class TaskController {
         this.taskService = taskService;
     }
 
-    // Sprint 1 endpoints will be implemented in Step 2:
-    //   POST   /tasks
-    //   GET    /tasks
-    //   GET    /tasks/{id}
+    // US-1: Create a task
+    @PostMapping
+    public ResponseEntity<Task> createTask(@RequestBody CreateTaskRequest request) {
+        Task created = taskService.createTask(request.getTitle(), request.getDescription());
+        return ResponseEntity.status(HttpStatus.CREATED).body(created);
+    }
 
-    // Sprint 2 endpoints will be implemented in Step 8:
-    //   PUT    /tasks/{id}/complete
-    //   DELETE /tasks/{id}
-    //   PUT    /tasks/{id}
+    // US-2: View all tasks
+    @GetMapping
+    public ResponseEntity<List<Task>> getAllTasks() {
+        return ResponseEntity.ok(taskService.getAllTasks());
+    }
+
+    // US-3: View a single task
+    @GetMapping("/{id}")
+    public ResponseEntity<Task> getTaskById(@PathVariable Long id) {
+        return taskService.getTaskById(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
 }
