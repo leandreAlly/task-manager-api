@@ -1,6 +1,6 @@
 # Task Manager REST API
 
-![CI Pipeline](https://github.com/<YOUR_GITHUB_USERNAME>/task-manager-api/actions/workflows/main.yml/badge.svg)
+![CI Pipeline](https://github.com/leandreAlly/task-manager-api/actions/workflows/main.yml/badge.svg)
 
 A lightweight Task Manager REST API built with **Java 17 + Spring Boot 3.x** to demonstrate Agile delivery and DevOps best practices.
 
