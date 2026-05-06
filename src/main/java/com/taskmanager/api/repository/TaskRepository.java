@@ -39,4 +39,9 @@ public class TaskRepository {
     public boolean existsById(Long id) {
         return store.containsKey(id);
     }
+
+    public void clearAll() {
+        store.clear();
+        idSequence.set(1);
+    }
 }
