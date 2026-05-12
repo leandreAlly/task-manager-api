@@ -1,6 +1,7 @@
 package com.taskmanager.api.repository;
 
 import com.taskmanager.api.model.Task;
+import com.taskmanager.api.model.TaskStatus;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -9,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
+import java.util.stream.Collectors;
 
 @Repository
 public class TaskRepository {
@@ -30,6 +32,12 @@ public class TaskRepository {
 
     public List<Task> findAll() {
         return new ArrayList<>(store.values());
+    }
+
+    public List<Task> findByStatus(TaskStatus status) {
+        return store.values().stream()
+                .filter(t -> t.getStatus() == status)
+                .collect(Collectors.toList());
     }
 
     public boolean deleteById(Long id) {

@@ -115,6 +115,80 @@ class TaskControllerTest {
                 .andExpect(jsonPath("$[*].title", containsInAnyOrder("Task A", "Task B")));
     }
 
+    @Test
+    @DisplayName("US-2: GET /tasks?status=PENDING returns only pending tasks")
+    void getAllTasks_filterByPending_returnsOnlyPendingTasks() throws Exception {
+        CreateTaskRequest taskA = new CreateTaskRequest();
+        taskA.setTitle("Pending Task");
+        taskA.setDescription("Not done yet");
+
+        CreateTaskRequest taskB = new CreateTaskRequest();
+        taskB.setTitle("Done Task");
+        taskB.setDescription("Already done");
+
+        mockMvc.perform(post("/tasks")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(taskA)));
+
+        mockMvc.perform(post("/tasks")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(taskB)));
+
+        mockMvc.perform(put("/tasks/2/complete"));
+
+        mockMvc.perform(get("/tasks").param("status", "PENDING"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$", hasSize(1)))
+                .andExpect(jsonPath("$[0].title").value("Pending Task"))
+                .andExpect(jsonPath("$[0].status").value("PENDING"));
+    }
+
+    @Test
+    @DisplayName("US-2: GET /tasks?status=COMPLETED returns only completed tasks")
+    void getAllTasks_filterByCompleted_returnsOnlyCompletedTasks() throws Exception {
+        CreateTaskRequest taskA = new CreateTaskRequest();
+        taskA.setTitle("Task Alpha");
+        taskA.setDescription("Alpha description");
+
+        CreateTaskRequest taskB = new CreateTaskRequest();
+        taskB.setTitle("Task Beta");
+        taskB.setDescription("Beta description");
+
+        mockMvc.perform(post("/tasks")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(taskA)));
+
+        mockMvc.perform(post("/tasks")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(taskB)));
+
+        mockMvc.perform(put("/tasks/1/complete"));
+
+        mockMvc.perform(get("/tasks").param("status", "COMPLETED"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$", hasSize(1)))
+                .andExpect(jsonPath("$[0].title").value("Task Alpha"))
+                .andExpect(jsonPath("$[0].status").value("COMPLETED"));
+    }
+
+    @Test
+    @DisplayName("US-2: GET /tasks?status=PENDING returns empty list when all tasks are completed")
+    void getAllTasks_filterByPending_returnsEmpty_whenAllCompleted() throws Exception {
+        CreateTaskRequest request = new CreateTaskRequest();
+        request.setTitle("Only Task");
+        request.setDescription("Will be completed");
+
+        mockMvc.perform(post("/tasks")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(request)));
+
+        mockMvc.perform(put("/tasks/1/complete"));
+
+        mockMvc.perform(get("/tasks").param("status", "PENDING"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$", hasSize(0)));
+    }
+
     // ── US-3: GET /tasks/{id} ────────────────────────────────────────────────
 
     @Test

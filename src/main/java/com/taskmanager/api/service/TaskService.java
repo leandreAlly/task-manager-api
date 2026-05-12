@@ -23,8 +23,9 @@ public class TaskService {
         return taskRepository.save(task);
     }
 
-    public List<Task> getAllTasks() {
-        return taskRepository.findAll();
+    public List<Task> getAllTasks(TaskStatus status) {
+        if (status == null) return taskRepository.findAll();
+        return taskRepository.findByStatus(status);
     }
 
     public Optional<Task> getTaskById(Long id) {
