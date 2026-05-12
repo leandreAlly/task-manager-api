@@ -3,6 +3,7 @@ package com.taskmanager.api.controller;
 import com.taskmanager.api.dto.CreateTaskRequest;
 import com.taskmanager.api.dto.UpdateTaskRequest;
 import com.taskmanager.api.model.Task;
+import com.taskmanager.api.model.TaskStatus;
 import com.taskmanager.api.service.TaskService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,11 +34,12 @@ public class TaskController {
         return ResponseEntity.status(HttpStatus.CREATED).body(created);
     }
 
-    // US-2: View all tasks
+    // US-2: View all tasks (optional ?status= filter)
     @GetMapping
-    public ResponseEntity<List<Task>> getAllTasks() {
-        log.info("GET /tasks - retrieving all tasks");
-        List<Task> tasks = taskService.getAllTasks();
+    public ResponseEntity<List<Task>> getAllTasks(
+            @RequestParam(required = false) TaskStatus status) {
+        log.info("GET /tasks - retrieving tasks, status filter: {}", status);
+        List<Task> tasks = taskService.getAllTasks(status);
         log.info("Returning {} task(s)", tasks.size());
         return ResponseEntity.ok(tasks);
     }

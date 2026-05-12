@@ -1,0 +1,9 @@
+/Users/ally/projects/task-manager-api/src/main/java/com/taskmanager/api/dto/UpdateTaskRequest.java
+/Users/ally/projects/task-manager-api/src/main/java/com/taskmanager/api/model/TaskStatus.java
+/Users/ally/projects/task-manager-api/src/main/java/com/taskmanager/api/TaskManagerApiApplication.java
+/Users/ally/projects/task-manager-api/src/main/java/com/taskmanager/api/dto/CreateTaskRequest.java
+/Users/ally/projects/task-manager-api/src/main/java/com/taskmanager/api/controller/TaskController.java
+/Users/ally/projects/task-manager-api/src/main/java/com/taskmanager/api/repository/TaskRepository.java
+/Users/ally/projects/task-manager-api/src/main/java/com/taskmanager/api/controller/HealthController.java
+/Users/ally/projects/task-manager-api/src/main/java/com/taskmanager/api/model/Task.java
+/Users/ally/projects/task-manager-api/src/main/java/com/taskmanager/api/service/TaskService.java

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.taskmanager.api.controller.TaskControllerTest" time="0.894" tests="16" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/ally/projects/task-manager-api/target/test-classes:/Users/ally/projects/task-manager-api/target/classes:/Users/ally/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.5/spring-boot-starter-web-3.2.5.jar:/Users/ally/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.5/spring-boot-starter-3.2.5.jar:/Users/ally/.m2/repository/org/springframework/boot/spring-boot/3.2.5/spring-boot-3.2.5.jar:/Users/ally/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.5/spring-boot-autoconfigure-3.2.5.jar:/Users/ally/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.5/spring-boot-starter-logging-3.2.5.jar:/Users/ally/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/Users/ally/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/Users/ally/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/ally/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/ally/.m2/repository/org/slf4j/jul-to-slf4j/2.0.13/jul-to-slf4j-2.0.13.jar:/Users/ally/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/ally/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/ally/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.5/spring-boot-starter-json-3.2.5.jar:/Users/ally/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.4/jackson-databind-2.15.4.jar:/Users/ally/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.4/jackson-annotations-2.15.4.jar:/Users/ally/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.4/jackson-core-2.15.4.jar:/Users/ally/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.4/jackson-datatype-jdk8-2.15.4.jar:/Users/ally/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.4/jackson-datatype-jsr310-2.15.4.jar:/Users/ally/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.4/jackson-module-parameter-names-2.15.4.jar:/Users/ally/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.5/spring-boot-starter-tomcat-3.2.5.jar:/Users/ally/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.20/tomcat-embed-core-10.1.20.jar:/Users/ally/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.20/tomcat-embed-el-10.1.20.jar:/Users/ally/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.20/tomcat-embed-websocket-10.1.20.jar:/Users/ally/.m2/repository/org/springframework/spring-web/6.1.6/spring-web-6.1.6.jar:/Users/ally/.m2/repository/org/springframework/spring-beans/6.1.6/spring-beans-6.1.6.jar:/Users/ally/.m2/repository/io/micrometer/micrometer-observation/1.12.5/micrometer-observation-1.12.5.jar:/Users/ally/.m2/repository/io/micrometer/micrometer-commons/1.12.5/micrometer-commons-1.12.5.jar:/Users/ally/.m2/repository/org/springframework/spring-webmvc/6.1.6/spring-webmvc-6.1.6.jar:/Users/ally/.m2/repository/org/springframework/spring-aop/6.1.6/spring-aop-6.1.6.jar:/Users/ally/.m2/repository/org/springframework/spring-context/6.1.6/spring-context-6.1.6.jar:/Users/ally/.m2/repository/org/springframework/spring-expression/6.1.6/spring-expression-6.1.6.jar:/Users/ally/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.5/spring-boot-starter-test-3.2.5.jar:/Users/ally/.m2/repository/org/springframework/boot/spring-boot-test/3.2.5/spring-boot-test-3.2.5.jar:/Users/ally/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.5/spring-boot-test-autoconfigure-3.2.5.jar:/Users/ally/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/ally/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar:/Users/ally/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/ally/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/ally/.m2/repository/net/minidev/json-smart/2.5.1/json-smart-2.5.1.jar:/Users/ally/.m2/repository/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.jar:/Users/ally/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/Users/ally/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/ally/.m2/repository/net/bytebuddy/byte-buddy/1.14.13/byte-buddy-1.14.13.jar:/Users/ally/.m2/repository/org/awaitility/awaitility/4.2.1/awaitility-4.2.1.jar:/Users/ally/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/ally/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar:/Users/ally/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/Users/ally/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/ally/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/Users/ally/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/ally/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar:/Users/ally/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/Users/ally/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:/Users/ally/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/ally/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.13/byte-buddy-agent-1.14.13.jar:/Users/ally/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/ally/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/ally/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/ally/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/ally/.m2/repository/org/springframework/spring-core/6.1.6/spring-core-6.1.6.jar:/Users/ally/.m2/repository/org/springframework/spring-jcl/6.1.6/spring-jcl-6.1.6.jar:/Users/ally/.m2/repository/org/springframework/spring-test/6.1.6/spring-test-6.1.6.jar:/Users/ally/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Africa/Kigali"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="RW"/>
+    <property name="sun.boot.library.path" value="/Users/ally/Library/Java/JavaVirtualMachines/openjdk-25.0.1/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/ally/projects/task-manager-api/target/surefire/surefirebooter-20260512192823806_3.jar /Users/ally/projects/task-manager-api/target/surefire 2026-05-12T19-28-22_637-jvmRun1 surefire-20260512192823806_1tmp surefire_0-20260512192823806_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/ally/projects/task-manager-api/target/test-classes:/Users/ally/projects/task-manager-api/target/classes:/Users/ally/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.5/spring-boot-starter-web-3.2.5.jar:/Users/ally/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.5/spring-boot-starter-3.2.5.jar:/Users/ally/.m2/repository/org/springframework/boot/spring-boot/3.2.5/spring-boot-3.2.5.jar:/Users/ally/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.5/spring-boot-autoconfigure-3.2.5.jar:/Users/ally/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.5/spring-boot-starter-logging-3.2.5.jar:/Users/ally/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/Users/ally/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/Users/ally/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/ally/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/ally/.m2/repository/org/slf4j/jul-to-slf4j/2.0.13/jul-to-slf4j-2.0.13.jar:/Users/ally/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/ally/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/ally/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.5/spring-boot-starter-json-3.2.5.jar:/Users/ally/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.4/jackson-databind-2.15.4.jar:/Users/ally/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.4/jackson-annotations-2.15.4.jar:/Users/ally/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.4/jackson-core-2.15.4.jar:/Users/ally/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.4/jackson-datatype-jdk8-2.15.4.jar:/Users/ally/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.4/jackson-datatype-jsr310-2.15.4.jar:/Users/ally/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.4/jackson-module-parameter-names-2.15.4.jar:/Users/ally/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.5/spring-boot-starter-tomcat-3.2.5.jar:/Users/ally/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.20/tomcat-embed-core-10.1.20.jar:/Users/ally/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.20/tomcat-embed-el-10.1.20.jar:/Users/ally/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.20/tomcat-embed-websocket-10.1.20.jar:/Users/ally/.m2/repository/org/springframework/spring-web/6.1.6/spring-web-6.1.6.jar:/Users/ally/.m2/repository/org/springframework/spring-beans/6.1.6/spring-beans-6.1.6.jar:/Users/ally/.m2/repository/io/micrometer/micrometer-observation/1.12.5/micrometer-observation-1.12.5.jar:/Users/ally/.m2/repository/io/micrometer/micrometer-commons/1.12.5/micrometer-commons-1.12.5.jar:/Users/ally/.m2/repository/org/springframework/spring-webmvc/6.1.6/spring-webmvc-6.1.6.jar:/Users/ally/.m2/repository/org/springframework/spring-aop/6.1.6/spring-aop-6.1.6.jar:/Users/ally/.m2/repository/org/springframework/spring-context/6.1.6/spring-context-6.1.6.jar:/Users/ally/.m2/repository/org/springframework/spring-expression/6.1.6/spring-expression-6.1.6.jar:/Users/ally/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.5/spring-boot-starter-test-3.2.5.jar:/Users/ally/.m2/repository/org/springframework/boot/spring-boot-test/3.2.5/spring-boot-test-3.2.5.jar:/Users/ally/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.5/spring-boot-test-autoconfigure-3.2.5.jar:/Users/ally/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/ally/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar:/Users/ally/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/ally/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/ally/.m2/repository/net/minidev/json-smart/2.5.1/json-smart-2.5.1.jar:/Users/ally/.m2/repository/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.jar:/Users/ally/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/Users/ally/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/ally/.m2/repository/net/bytebuddy/byte-buddy/1.14.13/byte-buddy-1.14.13.jar:/Users/ally/.m2/repository/org/awaitility/awaitility/4.2.1/awaitility-4.2.1.jar:/Users/ally/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/ally/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar:/Users/ally/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/Users/ally/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/ally/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/Users/ally/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/ally/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar:/Users/ally/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/Users/ally/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:/Users/ally/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/ally/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.13/byte-buddy-agent-1.14.13.jar:/Users/ally/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/ally/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/ally/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/ally/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/ally/.m2/repository/org/springframework/spring-core/6.1.6/spring-core-6.1.6.jar:/Users/ally/.m2/repository/org/springframework/spring-jcl/6.1.6/spring-jcl-6.1.6.jar:/Users/ally/.m2/repository/org/springframework/spring-test/6.1.6/spring-test-6.1.6.jar:/Users/ally/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/ally"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-10-21"/>
+    <property name="java.home" value="/Users/ally/Library/Java/JavaVirtualMachines/openjdk-25.0.1/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/ally/projects/task-manager-api"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/ally/projects/task-manager-api/target/surefire/surefirebooter-20260512192823806_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="25.0.1+8-27"/>
+    <property name="user.name" value="ally"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.5"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/ally/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/rw/9z1p3n3d509cwmkkzv2b53680000gn/T/"/>
+    <property name="java.version" value="25.0.1"/>
+    <property name="user.dir" value="/Users/ally/projects/task-manager-api"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="80615"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/ally/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.0.1+8-27"/>
+    <property name="stdin.encoding" value="UTF-8"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="69.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[task-manager-api] "/>
+  </properties>
+  <testcase name="deleteTask_taskNoLongerRetrievable_afterDeletion" classname="com.taskmanager.api.controller.TaskControllerTest" time="0.309">
+    <system-out><![CDATA[19:28:24.086 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.taskmanager.api.controller.TaskControllerTest]: TaskControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:28:24.127 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.taskmanager.api.TaskManagerApiApplication for test class com.taskmanager.api.controller.TaskControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-05-12T19:28:24.241+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskControllerTest    : Starting TaskControllerTest using Java 25.0.1 with PID 80615 (started by ally in /Users/ally/projects/task-manager-api)
+2026-05-12T19:28:24.242+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2026-05-12T19:28:24.560+02:00  INFO 80615 --- [task-manager-api] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-05-12T19:28:24.560+02:00  INFO 80615 --- [task-manager-api] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-05-12T19:28:24.560+02:00  INFO 80615 --- [task-manager-api] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-05-12T19:28:24.567+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskControllerTest    : Started TaskControllerTest in 0.398 seconds (process running for 0.695)
+2026-05-12T19:28:24.869+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : POST /tasks - creating task with title: Temporary task
+2026-05-12T19:28:24.869+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task created successfully with id: 1
+2026-05-12T19:28:24.877+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : DELETE /tasks/1 - deleting task
+2026-05-12T19:28:24.877+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task 1 deleted successfully
+2026-05-12T19:28:24.878+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : GET /tasks/1 - retrieving task by id
+2026-05-12T19:28:24.879+02:00 ERROR 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task not found with id: 1
+]]></system-out>
+    <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/ally/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.13/byte-buddy-agent-1.14.13.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
+  <testcase name="getTaskById_returns200AndTask_whenFound" classname="com.taskmanager.api.controller.TaskControllerTest" time="0.012">
+    <system-out><![CDATA[2026-05-12T19:28:24.883+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : POST /tasks - creating task with title: Read a book
+2026-05-12T19:28:24.883+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task created successfully with id: 1
+2026-05-12T19:28:24.884+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : GET /tasks/1 - retrieving task by id
+2026-05-12T19:28:24.884+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task found with id: 1
+]]></system-out>
+  </testcase>
+  <testcase name="updateTask_returns404_whenNotFound" classname="com.taskmanager.api.controller.TaskControllerTest" time="0.003">
+    <system-out><![CDATA[2026-05-12T19:28:24.897+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : PUT /tasks/999 - updating task
+2026-05-12T19:28:24.897+02:00 ERROR 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Cannot update task - not found with id: 999
+]]></system-out>
+  </testcase>
+  <testcase name="deleteTask_returns404_whenNotFound" classname="com.taskmanager.api.controller.TaskControllerTest" time="0.001">
+    <system-out><![CDATA[2026-05-12T19:28:24.899+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : DELETE /tasks/999 - deleting task
+2026-05-12T19:28:24.899+02:00 ERROR 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Cannot delete task - not found with id: 999
+]]></system-out>
+  </testcase>
+  <testcase name="createTask_returns201AndCreatedTask" classname="com.taskmanager.api.controller.TaskControllerTest" time="0.001">
+    <system-out><![CDATA[2026-05-12T19:28:24.900+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : POST /tasks - creating task with title: Buy groceries
+2026-05-12T19:28:24.900+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task created successfully with id: 1
+]]></system-out>
+  </testcase>
+  <testcase name="completeTask_returns404_whenNotFound" classname="com.taskmanager.api.controller.TaskControllerTest" time="0.002">
+    <system-out><![CDATA[2026-05-12T19:28:24.902+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : PUT /tasks/999/complete - marking task as completed
+2026-05-12T19:28:24.902+02:00 ERROR 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Cannot complete task - not found with id: 999
+]]></system-out>
+  </testcase>
+  <testcase name="completeTask_returns200AndCompletedStatus" classname="com.taskmanager.api.controller.TaskControllerTest" time="0.002">
+    <system-out><![CDATA[2026-05-12T19:28:24.904+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : POST /tasks - creating task with title: Write report
+2026-05-12T19:28:24.904+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task created successfully with id: 1
+2026-05-12T19:28:24.905+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : PUT /tasks/1/complete - marking task as completed
+2026-05-12T19:28:24.905+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task 1 marked as COMPLETED
+]]></system-out>
+  </testcase>
+  <testcase name="updateTask_returns200WithUpdatedFields" classname="com.taskmanager.api.controller.TaskControllerTest" time="0.002">
+    <system-out><![CDATA[2026-05-12T19:28:24.906+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : POST /tasks - creating task with title: Old title
+2026-05-12T19:28:24.906+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task created successfully with id: 1
+2026-05-12T19:28:24.907+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : PUT /tasks/1 - updating task
+2026-05-12T19:28:24.907+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task 1 updated successfully
+]]></system-out>
+  </testcase>
+  <testcase name="createTask_assignsUniqueIds" classname="com.taskmanager.api.controller.TaskControllerTest" time="0.002">
+    <system-out><![CDATA[2026-05-12T19:28:24.908+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : POST /tasks - creating task with title: Task One
+2026-05-12T19:28:24.908+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task created successfully with id: 1
+2026-05-12T19:28:24.909+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : POST /tasks - creating task with title: Task Two
+2026-05-12T19:28:24.909+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task created successfully with id: 2
+]]></system-out>
+  </testcase>
+  <testcase name="getTaskById_returns404_whenNotFound" classname="com.taskmanager.api.controller.TaskControllerTest" time="0.001">
+    <system-out><![CDATA[2026-05-12T19:28:24.911+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : GET /tasks/999 - retrieving task by id
+2026-05-12T19:28:24.911+02:00 ERROR 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task not found with id: 999
+]]></system-out>
+  </testcase>
+  <testcase name="getAllTasks_returnsAllTasks" classname="com.taskmanager.api.controller.TaskControllerTest" time="0.009">
+    <system-out><![CDATA[2026-05-12T19:28:24.912+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : POST /tasks - creating task with title: Task A
+2026-05-12T19:28:24.912+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task created successfully with id: 1
+2026-05-12T19:28:24.913+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : POST /tasks - creating task with title: Task B
+2026-05-12T19:28:24.913+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task created successfully with id: 2
+2026-05-12T19:28:24.914+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : GET /tasks - retrieving tasks, status filter: null
+2026-05-12T19:28:24.914+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Returning 2 task(s)
+]]></system-out>
+  </testcase>
+  <testcase name="getAllTasks_filterByCompleted_returnsOnlyCompletedTasks" classname="com.taskmanager.api.controller.TaskControllerTest" time="0.006">
+    <system-out><![CDATA[2026-05-12T19:28:24.922+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : POST /tasks - creating task with title: Task Alpha
+2026-05-12T19:28:24.922+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task created successfully with id: 1
+2026-05-12T19:28:24.924+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : POST /tasks - creating task with title: Task Beta
+2026-05-12T19:28:24.924+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task created successfully with id: 2
+2026-05-12T19:28:24.925+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : PUT /tasks/1/complete - marking task as completed
+2026-05-12T19:28:24.925+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task 1 marked as COMPLETED
+2026-05-12T19:28:24.926+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : GET /tasks - retrieving tasks, status filter: COMPLETED
+2026-05-12T19:28:24.926+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Returning 1 task(s)
+]]></system-out>
+  </testcase>
+  <testcase name="deleteTask_returns204_whenDeleted" classname="com.taskmanager.api.controller.TaskControllerTest" time="0.002">
+    <system-out><![CDATA[2026-05-12T19:28:24.928+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : POST /tasks - creating task with title: Task to delete
+2026-05-12T19:28:24.928+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task created successfully with id: 1
+2026-05-12T19:28:24.928+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : DELETE /tasks/1 - deleting task
+2026-05-12T19:28:24.928+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task 1 deleted successfully
+]]></system-out>
+  </testcase>
+  <testcase name="getAllTasks_filterByPending_returnsEmpty_whenAllCompleted" classname="com.taskmanager.api.controller.TaskControllerTest" time="0.002">
+    <system-out><![CDATA[2026-05-12T19:28:24.930+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : POST /tasks - creating task with title: Only Task
+2026-05-12T19:28:24.930+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task created successfully with id: 1
+2026-05-12T19:28:24.930+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : PUT /tasks/1/complete - marking task as completed
+2026-05-12T19:28:24.930+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task 1 marked as COMPLETED
+2026-05-12T19:28:24.931+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : GET /tasks - retrieving tasks, status filter: PENDING
+2026-05-12T19:28:24.931+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Returning 0 task(s)
+]]></system-out>
+  </testcase>
+  <testcase name="getAllTasks_returnsEmptyList_whenNoTasksExist" classname="com.taskmanager.api.controller.TaskControllerTest" time="0.001">
+    <system-out><![CDATA[2026-05-12T19:28:24.932+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : GET /tasks - retrieving tasks, status filter: null
+2026-05-12T19:28:24.932+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Returning 0 task(s)
+]]></system-out>
+  </testcase>
+  <testcase name="getAllTasks_filterByPending_returnsOnlyPendingTasks" classname="com.taskmanager.api.controller.TaskControllerTest" time="0.002">
+    <system-out><![CDATA[2026-05-12T19:28:24.934+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : POST /tasks - creating task with title: Pending Task
+2026-05-12T19:28:24.935+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task created successfully with id: 1
+2026-05-12T19:28:24.935+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : POST /tasks - creating task with title: Done Task
+2026-05-12T19:28:24.935+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task created successfully with id: 2
+2026-05-12T19:28:24.935+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : PUT /tasks/2/complete - marking task as completed
+2026-05-12T19:28:24.935+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Task 2 marked as COMPLETED
+2026-05-12T19:28:24.936+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : GET /tasks - retrieving tasks, status filter: PENDING
+2026-05-12T19:28:24.936+02:00  INFO 80615 --- [task-manager-api] [           main] c.t.api.controller.TaskController        : Returning 1 task(s)
+]]></system-out>
+  </testcase>
+</testsuite>
